@@ -1,0 +1,12 @@
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 50px;    
+
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    
+}
