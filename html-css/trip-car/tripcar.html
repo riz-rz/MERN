@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripCar</title>
+    <link rel="stylesheet" href="tripcar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+    <body>
+      <header>
+        <div class="logo">
+            <img src="imgi_1_Logo.png" alt="TRIP CAR">
+        </div>
+        <nav class="navig-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Car List</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <button class="readmore-butn">Read More</button>
+            <button class="menu-bar" id="menu-bar">
+                <img src="menu-duo-md-svgrepo-com (1).svg" alt="--">
+            </button>
+            
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="menu-container">
+                <button class="close-butn">X</button>
+                <ul class="menu-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Car List</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact Us</a></li>
+                </ul>
+        </div>
+        <div class="hero-cntnt">
+            <p style="font-style: italic;" data-aos="fade-right" data-aos-duration="2000"><img style="width: 20px;" src="imgi_2_Line.png" alt="///">DRIVE WITH CONFIDENCE</p>
+            <h1 data-aos="fade-right" data-aos-duration="3000" data-aos-offset="300">RELIABLE CARS, ANYTIME  YOU NEED </h1>
+            <p data-aos="fade-right" data-aos-duration="2000">Tripcar makes car rental easy with a wide range of well-maintained vehicles ready for any journey. Book in minutes and drive stress-free</p>
+            <button class="booking" data-aos="fade-right" data-aos-duration="2000">
+                Book A Car
+            </button>
+            <div class="rating" data-aos="fade-right" data-aos-duration="2000">
+                <div class="ppl-container">
+                    <div class="pp1" style=" width: 84px; height: 84px; border-radius: 50%; background-image: url('ppl.jpg');background-repeat: no-repeat; background-size: cover; position: absolute; top: 0; left: 0;"></div>
+                    <div class="pp2" style=" width: 84px; height: 84px; border-radius: 50%; background-image: url('ppl\ \(1\).jpg');background-repeat: no-repeat; background-size: cover; position: absolute; top: 0; left: 54px;"></div>
+                    <div class="pp3" style=" width: 84px; height: 84px; border-radius: 50%; background-image: url('ppl\ \(2\).jpg');background-repeat: no-repeat; background-size: cover;position: absolute; top: 0; left: 108px;"></div>
+                </div>
+                <P>⭐⭐⭐⭐ 4.9/5<br> Average Rating</P>
+            </div>
+        </div>
+        <div class="main-car">
+            <h1 style="font-weight: 600; z-index: 4; position: relative;" data-aos="zoom-in" data-aos-duration="1000">50K</h1>
+            <img src="main-car.png" alt="🚕">
+        </div>
+    </section>
+    <!-- <section class="rental-brands"> -->
+        <!-- <div class="heading-2">
+            <img src="imgi_2_Line.png" alt="///"> 
+            <h1>165+ Rental Fleet Brands</h1>
+            <img src="imgi_2_Line.png" alt="///">
+        </div> -->
+        <!-- <div class="brand-container"> -->
+            <!-- <div class="brand">
+                <img src="imgi_7_Cadillac.png" alt="">
+            </div>
+            <div class="brand">
+                <img src="imgi_8_Caterham.png" alt="">
+            </div>
+            <div class="brand">
+                <img src="imgi_9_Bugatti.png" alt="">
+            </div>
+            <div class="brand caparo">
+                <img src="imgi_10_Caparo.png" alt="">
+            </div>
+            <div class="brand carlsson">
+                <img src="imgi_11_Carlsson.png" alt="">
+            </div>
+            <div class="brand">
+                <img src="imgi_12_Buick.png" alt="">
+            </div>
+            <div class="brand">
+                <img src="imgi_13_BYD.png" alt="">
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+
+
+    
+    <script src="tripcar.js"></script>
+    <script>
+         AOS.init();
+        
+
+         const vw = document.documentElement.clientWidth;
+const offenders = [...document.querySelectorAll('*')]
+  .map(el => ({el, w: el.scrollWidth, rect: el.getBoundingClientRect()}))
+  .filter(o => o.rect.right > vw || o.w > vw)
+  .sort((a,b) => b.rect.right - a.rect.right);
+console.table(offenders.map(o => ({
+  tag: o.el.tagName,
+  class: o.el.className,
+  scrollWidth: o.w,
+  right: Math.round(o.rect.right),
+  left: Math.round(o.rect.left)
+})));
+    </script>
+</body>
+</html>

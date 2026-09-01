@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clacu</title>
+    <link rel="stylesheet" href="calcu.css">
+</head>
+<body>
+    <div class="parent">
+        <form action="" class="calcu-form">
+            <input type="text" name="calcu-input" id="calcu-input">
+        </form>
+        <div class="grid-parent">
+            <div class="item1"><button id="b7" >7</button></div>
+            <div class="item2"><button id="b8" onclick="appendValue(8)">8</button></div>
+            <div class="item3"><button id="b9" onclick="appendValue(9)">9</button></div>
+            <div class="item4"><button id="b*" onclick="appendValue('*')">*</button></div>
+            <div class="item5"><button id="b4" onclick="appendValue(4)">4</button></div>
+            <div class="item6"><button id="b5" onclick="appendValue(5)">5</button></div>
+            <div class="item7"><button id="b6" onclick="appendValue(6)">6</button></div>
+            <div class="item8"><button id="b/" onclick="appendValue('/')">/</button></div>
+            <div class="item9"><button id="b1" onclick="appendValue(1)">1</button></div>
+            <div class="item10"><button id="b2"  onclick="appendValue(2)">2</button></div>
+            <div class="item11"><button id="b3" onclick="appendValue(3)">3</button></div>
+            <div class="item12"><button id="b-" onclick="appendValue('-')">-</button></div>
+            <div class="item13"><button id="b." onclick="appendValue('.')">.</button></div>
+            <div class="item14"><button id="b0" onclick="appendValue(0)">0</button></div>
+            <div class="item15"><button id="bc" onclick="emptyTheInput()">C</button></div>
+            <div class="item16"><button id="b+" onclick="appendValue('+')">+</button></div>
+            <div class="item17"><button  class="equals" onclick="evaluateTheInput()">=</button></div>
+        </div>
+    </div>
+    
+
+    <script src="calcu.js"></script>
+</body>
+</html>
+
+<!-- onclick="appendValue(7)" -->

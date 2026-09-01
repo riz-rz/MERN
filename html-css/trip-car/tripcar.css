@@ -1,0 +1,386 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Bai Jamjuree',sans-serif;
+    
+}
+
+:root{
+    --red: rgb(237, 29, 38);
+    --black:rgb(7, 3, 14);
+}
+
+body{
+    background-color: var(--black);
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 6;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.navig-bar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navig-bar ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    display: none;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+ul a{
+    text-decoration: none;
+}
+
+ul a:hover{
+    color: var(--red);
+}
+
+.readmore-butn{
+    background-color: white;
+    color: var(--black);
+    width: 120px;
+    height: 50px;
+    border-radius: 8px;
+    border-style: none;
+    display: none;
+}
+
+.menu-bar{
+    border-style: none;
+    background: transparent;
+}
+
+.menu-bar img{
+    width: 40px;
+}
+
+.menu-container{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    transform: translateY(-430px);
+    z-index: 5;
+    background-color: black;
+    transition: transform 2000ms ease-in;
+}
+
+.menu-links li{
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    color: rgb(184, 184, 184);
+}
+
+.close-butn{
+    background: transparent;
+    border-style: none;
+    color: var(--red);
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    position: absolute;
+    right: 10px;
+}
+
+.hero{
+    /* height: 120vh; */
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.hero-cntnt{
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.hero p{
+    color: rgb(194, 194, 194);
+    font-size: 14px;
+    font-weight: 500;
+    /* font-style: italic; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero h1{
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.booking{
+    width: 100%;
+    height: 50px;
+    background-color: var(--red);
+    font-size: 20px;
+    border-style: none;
+    border-radius: 8px;
+
+}
+
+.rating{
+    width: 250px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ppl-container{
+    width: 200px;
+    height: 100px;
+    position: relative;
+    /* background-color: yellow; */
+}
+
+.main-car{
+    width: 80%;
+    height: 250px;
+    z-index: 1;
+    position: relative;
+    /* bottom: 10px; */
+    overflow: visible;
+}
+
+.main-car::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('main-car-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mask-image: radial-gradient( ellipse at center, black 50%, transparent 100% );
+    z-index: 2;
+
+}
+
+.main-car img{
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: -50px;
+    z-index: 3;
+        /* outline: 2px solid red; */
+
+
+}
+
+                        /* rental brands--section 2 */
+
+.rental-brands{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: var(--black);
+    margin-top: 0px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.heading-2{
+    /* background-color: crimson; */
+    /* width: 100%; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.heading-2 img{
+    width: 50px;
+    height: 40px;
+}
+
+.heading-2 h1{
+    text-align: center;
+}
+
+/* .brand-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+
+}
+
+.brand-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+.brand{
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-left: 50px;
+
+} */
+
+
+
+
+                    /* media */
+
+@media (min-width:768px) {
+    .navig-bar ul{
+        display: flex;
+    }
+
+    .menu-bar{
+        display: none;
+    }
+
+    .menu-container{
+        display: none;
+    }
+
+    .booking{
+        width: 150px;
+    }
+
+    .main-car{
+        height: 400px;
+        bottom: -50px;
+    }
+
+    .heading-2{
+        width: 650px;
+    }
+
+    /* .carlsson{
+        display: none;
+    }
+
+    .caparo{
+        display: none;
+    } */
+
+}
+
+@media (min-width:1025px) {
+    .logo{
+        padding: 0 50px;
+    }
+    .logo img{
+        width: 250px;
+    }
+    .readmore-butn{
+        display: block;
+    }
+    .hero{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 50px 0 100px ;
+    }
+    .hero-cntnt{
+        width: 45%;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .hero h1{
+        font-size: 70px;
+    }
+    .rating{
+        margin-top: 180px;
+    }
+
+    .main-car{
+        width: 65%;
+        height: 800px;
+        position: relative;
+    }
+
+    .main-car h1{
+        position: absolute;
+        right: -400px;
+        top: 0px;
+    }
+
+    .main-car::before{
+        mask-image: radial-gradient( ellipse closest-side at center, black 30%, transparent 100% );
+    }
+
+    .main-car img{
+        width: 1000px;
+        position: absolute;
+        left: -300px;   /*down to left , up tp right (iykyk)*/
+        bottom: 100px;
+    }
+
+    .heading-2{
+        /* background-color: pink; */
+        width: 100%;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .heading-2 h1{
+        font-size: 50px;
+    }
+
+    /* .brand-container{
+        width: 100%;
+        background-color: orangered;
+    }
+    .brand{
+        background-color: palegoldenrod;
+    }
+    .carlsson{
+        display: none;
+    }
+
+    .caparo{
+        display: flex;
+    } */
+
+    
+}
