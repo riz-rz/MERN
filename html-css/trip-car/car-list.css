@@ -107,219 +107,56 @@ ul a:hover{
     right: 10px;
 }
 
+                            /* hero */
+
 .hero{
-    /* height: 120vh; */
     width: 100%;
-    background-color: var(--black);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    /* background-color: purple; */
     position: relative;
-    margin-bottom: 50px;
-    overflow: hidden;
+
 }
 
-.hero-cntnt{
+.hero::before{
+    content: '';
     width: 100%;
-    /* background-color: yellow; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
-
-}
-
-.hero p{
-    color: rgb(194, 194, 194);
-    font-size: 14px;
-    font-weight: 500;
-    /* font-style: italic; */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.hero h1{
-    font-size: 60px;
-    font-weight: 500;
-}
-
-.booking{
-    width: 100%;
-    height: 50px;
-    background-color: var(--red);
-    font-size: 20px;
-    border-style: none;
-    border-radius: 8px;
-
-}
-
-.rating{
-    width: 250px;
-    height: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.ppl-container{
-    width: 200px;
-    height: 100px;
-    position: relative;
-    /* background-color: yellow; */
-}
-
-.main-car{
-    width: 80%;
-    height: 250px;
-    z-index: 1;
-    position: relative;
-    /* bottom: 10px; */
-    overflow: visible;
-}
-
-.main-car::before{
-    content: "";
+    height: 100%;
     position: absolute;
     inset: 0;
-    background-image: url('main-car-bg.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    mask-image: radial-gradient( ellipse at center, black 50%, transparent 100% );
-    z-index: 2;
-
+    background-color: rgba(0, 0, 0, 0.74);
 }
 
-.main-car img{
+.hero img{
+    width: 100%;
+    height: 500px;
     object-fit: cover;
-    width: 100%;
-    position: absolute;
-    bottom: -10px;
-    left: -50px;
-    z-index: 3;
-        /* outline: 2px solid red; */
-
-
-}
-
-                        /* rental brands--section 2 */
-
-.rental-brands{
-    /* height: 100vh; */
-    width: 100%;
-    background-color: var(--black);
-    margin-top: 0px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-}
-
-.heading-2{
-    /* background-color: crimson; */
-    /* width: 100%; */
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.heading-2 img{
-    width: 50px;
-    height: 40px;
-}
-
-.heading-2 h1{
-    text-align: center;
-}
-
-.brand-container{
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
     
-
 }
 
-.brand-container::-webkit-scrollbar{
-    display: none;
-}
-
-
-.brand{
-    flex: 0 0 150px;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    margin-left: 50px;
-
-}
-
-.rental-brands p{
-    text-align: center;
-}
-
-                    /* section-3 */
-
-.section-3{
-    height: 150vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    margin-top: 50px;
-}
-
-.section3-cntn{
-    /* background-color:blue; */
-    /* flex: 1; */
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    text-align: center;
-    padding: 0 20px;
-
-}
-
-.section3-cntn h1{
-    font-size: 55px;
-    font-weight: 500;
-}
-
-.data-parent{
+.hero-cntnts{
+    width: 80%;
+    /* background-color: yellow; */
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 20px;
+    padding: 0 20px;
 }
 
-.data h1{
-    font-weight: 550;
+.hero-cntnts h1{
+    font-size: 40px;
+
 }
 
-.section3-img{
-    /* background-color: yellowgreen; */
-    /* flex: 1; */
-    height: 50%;
-    background-image: url('section3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 20px;
-    border-radius: 10px;
+.hero-cntnts p{
+    color: rgb(190, 190, 190);
+    font-size: 18px;
+    text-align: center;
 }
-
 
                     /* fleet-section */
 
@@ -327,7 +164,7 @@ ul a:hover{
     /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 50px;
     
     
@@ -338,7 +175,7 @@ ul a:hover{
     display: flex;
     flex-direction: column;
     gap: 35px;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     padding: 0 20px;
 }
@@ -407,7 +244,98 @@ ul a:hover{
     color: red;
 }
 
-                /* section-5 */
+                        /* booking form */
+
+.booking{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 50px;
+  
+}
+
+.booking-cntnt{
+    margin-top: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.booking-cntnt h1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.booking-cntnt p{
+    color: rgb(187, 187, 187);
+}
+
+.booking-form{
+    /* height: 90vh; */
+    width: 100%;
+    background-color: rgb(22, 19, 26);
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column; */
+    /* gap: 5px; */
+    padding: 20px 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 25px;
+}
+
+.child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-form label{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.booking-form input{
+    /* width: 100%; */
+    height: 60px;
+    background: transparent;
+    border-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.308);
+    padding: 0 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.booking-form textarea{
+    /* width: 100%; */
+    background: transparent;
+    border-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.308);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.booking-butn{
+    width: 100%;
+    height: 70px;
+    background-color: var(--red);
+    border-radius: 10px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+                        /* section-5 why works */
 
 .section5{
     /* height: 200vh; */
@@ -490,6 +418,7 @@ ul a:hover{
 }
 
                 /* footer */
+
 
 footer{
     /* height: 100vh; */
@@ -606,7 +535,7 @@ footer{
 }
 
 
-                    /* media */
+                        /* media */
 
 @media (min-width:768px) {
     .navig-bar ul{
@@ -620,41 +549,30 @@ footer{
     .menu-container{
         display: none;
     }
-
-    .booking{
-        width: 150px;
+    .hero-cntnts{
+        top: 0;
+        left: 90px;
+    }
+    .booking-form input{
+        /* width: 300px; */
+    }
+    .grid {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+            row-gap: 8px;
     }
 
-    .main-car{
-        height: 400px;
-        bottom: -50px;
+    .child {
+        min-width: 0;
     }
 
-    .heading-2{
-        /* width: 650px; */
-        justify-content: center;
-        gap: 30px;
+    .child:last-child {
+        grid-column: 1 / 4;
     }
 
-    /* .carlsson{
-        display: none;
-    }
-
-    .caparo{
-        display: none;
-    } */
-
-    .section3-cntn{
-        height: 30%;
-    }
-
-    .section3-img{
-        height: 70%;
-    }
-
-    .data-parent{
-        flex-direction: row;
-        gap: 80px;
+    .booking-form input,
+    .booking-form textarea {
+        width: 100%;
     }
 
     .section5-buttons{
@@ -676,6 +594,8 @@ footer{
         font-size: 20px;
     }
 
+
+
 }
 
 @media (min-width:1025px) {
@@ -688,108 +608,24 @@ footer{
     .readmore-butn{
         display: block;
     }
-    .hero{
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 50px 0 100px ;
-    }
-    .hero-cntnt{
-        width: 45%;
-        text-align: left;
-        display: flex;
-        align-items: flex-start;
-        gap: 30px;
-    }
-    .hero h1{
-        font-size: 70px;
-    }
-    .rating{
-        margin-top: 180px;
+    .hero-cntnts{
+        left: 130px;
     }
 
-    .main-car{
-        width: 65%;
-        height: 800px;
-        position: relative;
+    .hero-cntnts h1{
+        font-size: 80px;
+        font-weight: 500;
     }
 
-    .main-car h1{
-        position: absolute;
-        right: -400px;
-        top: 0px;
+    .hero-cntnts p{
+        font-size: 24px;
     }
-
-    .main-car::before{
-        mask-image: radial-gradient( ellipse closest-side at center, black 30%, transparent 100% );
-    }
-
-    .main-car img{
-        width: 1000px;
-        position: absolute;
-        left: -300px;   /*down to left , up tp right (iykyk)*/
-        bottom: 100px;
-    }
-
-    .rental-brands{
-        margin-top: 150px;
-    }
-
-    .heading-2{
-        /* background-color: pink; */
-        width: 100%;
-        justify-content: center;
-        gap: 40px;
-    }
-
-    .heading-2 h1{
-        font-size: 50px;
-    }
-
-     .brand-container{
-        padding: 0 100px;
-    }
-   /* .brand{
-        background-color: palegoldenrod;
-    }
-    .carlsson{
-        display: none;
-    }
-
-    .caparo{
-        display: flex;
-    } */
-
-    .rental-brands p{
-        padding: 0 400px;
-    }
-
-    .section-3{
-        padding: 0 100px;
-        height: 80vh;
-        flex-direction: row-reverse;
-        margin-top: 200px;
-    }
-    .section3-cntn{
-        width: 60%;
-        gap: 50px;
-        text-align: left;
-        margin-left: 20px;
-    }
-    .section3-img{
-        width: 40%;
-        height: 100%;
-    }
-
     .fleet{
-        margin-top: 150px;
+        margin-top: 100px;
         padding: 0 100px;
     }
-
-
     .fleet-cntnts{
         flex-direction: row;
-        /* justify-content: space-between; */
         text-align: left;
         gap: 500px;
         /* padding: 0 100px; */
@@ -798,7 +634,7 @@ footer{
     .fleet-cntnts h1{
         font-size: 40px;
         font-weight: 600;
-        text-align: justify;
+        /* text-align: left; */
     }
 
     .fleet-cntnts p{
@@ -814,6 +650,15 @@ footer{
         font-size: 18px;
     }
 
+    .booking{
+        padding: 0 100px;
+    }
+
+    .booking-cntnt{
+        flex-direction: row;
+        text-align: left;
+    }
+    
     .section5{
         flex-direction: row-reverse;
         padding: 0 100px;
@@ -859,5 +704,6 @@ footer{
     .footer-links a{
         font-size: 14px;
     }
+
     
 }

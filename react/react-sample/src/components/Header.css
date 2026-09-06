@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.butn{
+    color: white;
+    background-color: black;
+    padding: 10px 10px ;
+    border-style: none;
+    border-radius: 20px;
+}
