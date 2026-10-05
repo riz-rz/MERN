@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ProductList from './components/ProductList';
+import Header from './components/Header';
 
 const initialProducts = [
   {
@@ -216,12 +218,13 @@ const initialProducts = [
 
 const App = () => {
   
-  
+  const [Products,setProducts] = useState(initialProducts)
   
   
   return (
     <div>
-
+      <Header/>
+      <ProductList products={Products}  setProducts={setProducts} />
     </div>
   )
 }
