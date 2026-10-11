@@ -34,11 +34,7 @@ const AddProduct = ({setProducts, setFormVis}) => {
 
     }
 
-
     
-
-
-
     return (
     <div>
         <form onSubmit={handleSubmit} action="" className='w-sm min-h-sm flex flex-col gap-5 border items-center py-3'>

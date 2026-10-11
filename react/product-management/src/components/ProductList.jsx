@@ -4,13 +4,14 @@ import AddProduct from './AddProduct'
 import SearchProducts from './SearchProducts'
 import EmptyState from './EmptyState'
 
-const ProductList = ({products,setProducts}) => {
+const ProductList = ({products,setProducts,DarkMode}) => {
  
     const categories = ["all", ...new Set(products.map((product)=>product.category))]    //this gets rid of the repetation while using map as it is
     
     const [Category, setCategory] = useState("all")
     const [FormVis, setFormVis] = useState(false)
     const [Search,setSearch] = useState("")
+
 
 
    
@@ -54,16 +55,16 @@ const ProductList = ({products,setProducts}) => {
     
  
     return (
-    <div className='min-h-screen bg-[#F6F0D7] px-10 text-[#54613a] overflow-hidden'>
+    <div className={`min-h-screen px-10 overflow-hidden ${DarkMode ? "bg-gray-900 text-white" : "bg-[#F6F0D7] text-[#54613a]"}   `}>
         <div className='h-25 flex flex-row-reverse justify-between items-center  '>
             <div className='relative'>
-                <button onClick={()=>setFormVis(true)} className='border p-2 rounded-xl bg-gray-100'>Add Product</button>
+                <button onClick={()=>setFormVis(true)} className='border p-2 rounded-xl'>Add Product</button>
                 
-                <div className='absolute right-0 top-10 bg-[#9CAB84] translate-x-150 z-2' style={{translate: FormVis && "0"}}>
-                    <AddProduct setProducts={setProducts} setFormVis={setFormVis} />
+                <div className='absolute right-0 top-13 bg-[#9CAB84] translate-x-150 z-2 transition duration-1500' style={{translate: FormVis && "0"}}>
+                    <AddProduct setProducts={setProducts} setFormVis={setFormVis}  />
                 </div>
             </div>
-            <select onChange={(e)=>setCategory(e.target.value)} className='border outline-none w-40 h-10 rounded-xl  bg-gray-100 px-3' value={Category}  >
+            <select onChange={(e)=>setCategory(e.target.value)} className='border outline-none w-40 h-10 rounded-xl px-3' value={Category}  >
                 {
                     categories.map((category)=>{
                         return <option value={category} className='capitalize bg-[#F6F0D7] '>{category}</option>
@@ -71,7 +72,7 @@ const ProductList = ({products,setProducts}) => {
                 }
             </select>
             <p>Total Products: {filteredProducts.length}</p>
-            <div><SearchProducts Search={Search} setSearch={setSearch}/> </div>
+            <div><SearchProducts Search={Search} setSearch={setSearch} /> </div>
 
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
@@ -79,7 +80,7 @@ const ProductList = ({products,setProducts}) => {
                 filteredProducts.length > 0 
                 ? filteredProducts.map((product)=>{
                     return(
-                        <ProductCard key={product.id} product={product} setProducts={setProducts}/>
+                        <ProductCard key={product.id} product={product} setProducts={setProducts} DarkMode={DarkMode}/>
                     )
                 })
                 : (

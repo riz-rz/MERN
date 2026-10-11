@@ -216,15 +216,18 @@ const initialProducts = [
 ]; 
 
 
+
+
 const App = () => {
   
   const [Products,setProducts] = useState(initialProducts)
-  
+  const [DarkMode, setDarkMode] = useState(false)
+
   
   return (
     <div>
-      <Header/>
-      <ProductList products={Products}  setProducts={setProducts} />
+      <Header DarkMode={DarkMode} setDarkMode={setDarkMode}/>
+      <ProductList products={Products}  setProducts={setProducts} DarkMode={DarkMode} />
     </div>
   )
 }
